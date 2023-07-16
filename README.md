@@ -1,6 +1,6 @@
 npm install react-slick
 
-Auth0 React SDK for Single Page Apps `npm install @auth0/auth0-react`
+### Auth0 React SDK for Single Page Apps `npm install @auth0/auth0-react`
 
 - How to use the `auth0-react`
 
