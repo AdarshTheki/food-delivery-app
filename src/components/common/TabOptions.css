@@ -1,0 +1,27 @@
+.tabOption {
+  margin: 20px 0;
+  box-shadow: #a7a7a7 0px -0.5px 0px inset;
+}
+
+.tabOption-wrapper{
+  display: flex;
+}
+.tabOption-item {
+  margin-right: 24px;
+  padding: 12px 12px 20px ;
+}
+.tabOption-name{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #333;
+}
+.tabOption-image{
+  width: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #ffdee6;
+}
+.tabOption-image img{
+  width: 100%;
+}

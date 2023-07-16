@@ -1,0 +1,23 @@
+.filterItems{
+  padding: 0;
+  display: flex;
+}
+.filter-name{
+  margin-right: 20px;
+  background-color: #ebebeb;
+  color: #333;
+  padding: .3rem 1rem;
+  border: 1px solid #b9b9b9;
+  border-radius: 5px;
+}
+.filter-name:hover {
+  background-color: #ffdee6;
+}
+.filter-name:active {
+  background-color: #ffb6cc;
+}
+
+.filter-name > * {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}

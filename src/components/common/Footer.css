@@ -1,0 +1,60 @@
+.footer {
+  background-color: rgb(255, 242, 223);
+  padding: 40px 0;
+}
+
+.footer-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+
+.footer-header img {
+  display: block;
+  max-width: 200px;
+}
+.footer-location > button {
+  border: 1px solid rgb(170, 170, 170);
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 20px;
+  background-color: #fff;
+  font-weight: 600;
+  color: #333;
+  text-transform: capitalize;
+}
+.footer-main {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer-card > * {
+  margin: 5px 0;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+.footer-card > a:hover {
+  color: #e72163;
+}
+
+.footer-bottom {
+  display: block;
+}
+.footer-bottom .footer-border {
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.footer-social-links > * {
+  margin-bottom: 10px;
+}
+.footer-social-links > a i{
+  margin-right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #e72163;
+}

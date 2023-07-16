@@ -1,0 +1,50 @@
+.DiningOutCollections .icons {
+  margin: 10px 20px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 300px;
+  gap: 30px;
+}
+
+.bg-icons1 {
+  background-image: url("/src/assets/img1.jpg");
+}
+.bg-icons2 {
+  background-image: url("/src/assets/img2.jpg");
+}
+.bg-icons3 {
+  background-image: url("/src/assets/img3.jpg");
+}
+.bg-icons4 {
+  background-image: url("/src/assets/img4.jpg");
+}
+
+.bg-icons1,
+.bg-icons2,
+.bg-icons3,
+.bg-icons4{
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease-in; 
+}
+
+.hover:hover {
+  box-shadow: 1px 4px 5px 3px #9b9b9b;
+  transform: scale(1.01);
+}
+
+.text{
+  margin-top: 200px;
+  padding: 0 15px;
+  color: aliceblue;
+}
+
+.break {
+  border: 1px solid #d6d6d6;
+  width: 100%;
+  margin: 20px 0;
+}
