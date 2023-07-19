@@ -1,35 +1,43 @@
+import { useRef, useState } from "react";
 import "./FilterItems.css";
 
-const deliveryFilter = [
-  {
-    id: 1,
-    icon: <i className='fi fi-br-settings-sliders'></i>,
-    title: "Filters",
-  },
-  {
-    id: 2,
-    title: "Rating 4.8⭐",
-  },
-  {
-    id: 3,
-    icon: <i className='fi fi-br-angle-small-down'></i>,
-    title: "Cuisines",
-  },
-];
+const Filters = ["Beef", "Chicken", "Dessert", "Vegan", "Breakfast", "Goat"];
+// const category = ["Filter", "Rating", "Cuisines"];
+// const Ratings = ["bad", "good", "better", "best", "Excellent"];
+// const Cuisines = ["breakfast", "lunch", "dinner", "fastFood"];
 
 const FilterItems = () => {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef();
+  const btnRef = useRef();
+  const filterHandler = () => {
+    setOpen(!open);
+    window.addEventListener("click", (e) => {
+      if (e.target !== menuRef.current && e.target !== btnRef.current) {
+        setOpen(false);
+      }
+    });
+  };
   return (
     <div className='max-width'>
       <div className='filterItems'>
-        {deliveryFilter.map((filter) => (
-          <div key={filter.id} className='filter-name cur-po absolute-center'>
-            {filter.icon}
-            {filter.title} 
+        <button className='btn' onClick={filterHandler} ref={btnRef}>
+          Food filter
+        </button>
+        {open && (
+          <div className='menu' ref={menuRef}>
+            <h3>Food filter option</h3>
+            <ul className='menu-list'>
+              {Filters.map((ele) => (
+                <li key={ele} onClick={() => setOpen(false)}>
+                  {ele}
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
 };
-
 export default FilterItems;

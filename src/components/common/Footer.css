@@ -58,3 +58,6 @@
   cursor: pointer;
   color: #e72163;
 }
+.footer-social-links > a i:hover {
+  color: #e0618b;
+}

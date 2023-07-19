@@ -1,23 +1,20 @@
 // create context (warehouse)  => Provider  => consumer / useContext
-import { createContext, useEffect, useState } from "react";
-import Axios from "./axios";
+import { createContext } from "react";
+import { data } from "./data";
+
 
 // create context (warehouse)
 const AppContext = createContext();
 
 // Provider
 const AppProvider = ({ children }) => {
-  const [getData, setData] = useState([]);
-  useEffect(() => {
-    Axios.get("/categories.php")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((error) => {
-        console.log(error.massage);
-      });
-  }, []);
-  return <AppContext.Provider value={getData}>{children}</AppContext.Provider>;
+  return (
+    <AppContext.Provider value={data}>
+      {children}
+    </AppContext.Provider>
+  );
 };
-export { AppContext, AppProvider };
+export default AppProvider;
 // And also add to main.js to wrap AppProvider
+
+export { AppContext };

@@ -45,27 +45,27 @@ const DiningOut = () => {
           <h1 className='title'>Trending dining restaurants in Nagpur foods</h1>
           <div className='card-container'>
             {data
-              ?.sort()
-              .slice(0, 15)
+              ?.reverse()
+              .slice(0, 12)
               ?.map((ele) => (
-                <div key={ele.idMeal} className='card'>
-                  <img src={ele.img} alt='' />
-                  <h2>{ele.strMeal.slice(0, 20)}</h2>
+                <div key={ele.meal} className='card'>
+                  <img src={ele.img} alt={ele.id} title={ele.meal} />
+                  <h2>{ele.meal.slice(0, 20)}</h2>
                   <p>
-                    {ele.strMeal +
+                    {ele.meal +
                       "sit amet, consectetur adipisicing elit. Repudiandae" +
-                      ele.strMeal}
+                      ele.meal}
                   </p>
                   <p>
-                    <strong>Location:</strong> Nagpur
+                    <strong>Location:</strong> {ele.city}
                   </p>
                   <p>
                     <span>
-                      <strong>Rating:</strong> 4.2⭐{" "}
+                      <strong>Rating:</strong> {ele.id.slice(3,4)}⭐{" "}
                     </span>
                     <span>
                       {" "}
-                      <strong>Price:</strong> 119
+                      <strong>Price:</strong> {ele.id.slice(3,6)+9}/-
                     </span>
                   </p>
                 </div>

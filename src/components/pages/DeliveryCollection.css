@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 0 40px 0;
-  margin: 20px 0;
+  padding-bottom: 40px;
+  margin: 30px auto;
+  height: 260px;
 }

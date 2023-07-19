@@ -1,10 +1,22 @@
 import "./DeliveryCollection.css";
-import { useContext } from "react";
-import { AppContext } from "../../context";
+import { useEffect, useState } from "react";
+
+const URL_LINK = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
 const DeliveryCollection = () => {
-  // use Data with context API
-  const contextData = useContext(AppContext);
+  const [users, setUsers] = useState([]);
+  const fetchData = async () => {
+    try {
+      const response = await fetch(URL_LINK);
+      const data = await response.json();
+      setUsers(data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   // Note: Slider Button with left right arrows
   let box = document.querySelector(".collection-items");
@@ -16,13 +28,13 @@ const DeliveryCollection = () => {
     let width = box.clientWidth;
     box.scrollLeft = box.scrollLeft + width - 370;
   };
-  
+
   return (
     <div className='delivery-collection'>
       <div className='max-width'>
         <h1 className='collection-title'>Inspiration for your first order</h1>
         <div className='collection-items'>
-          {contextData?.categories?.map((data, index) => {
+          {users?.categories?.map((data, index) => {
             // get data into the container
             const { idCategory, strCategoryThumb, strCategory } = data;
             return (
@@ -52,24 +64,20 @@ const DeliveryCollection = () => {
 
 export default DeliveryCollection;
 
+// // Note: Get Data with the help of Axios and Error handle
+// const [getData, setData] = useState([]);
+// const [isError, setIsError] = useState("");
 
-
-
-
-  // // Note: Get Data with the help of Axios and Error handle
-  // const [getData, setData] = useState([]);
-  // const [isError, setIsError] = useState("");
-
-  // // Note: Using Async Await
-  // const getApiData = async () => {
-  //   try {
-  //     const res = await contextData
-  //     setData(res.categories);
-  //   } catch (error) {
-  //     setIsError(error.message);
-  //   }
-  // };
-  // // Note: One Time Data Get
-  // useEffect(() => {
-  //   getApiData();
-  // }, []);
+// // Note: Using Async Await
+// const getApiData = async () => {
+//   try {
+//     const res = await contextData
+//     setData(res.categories);
+//   } catch (error) {
+//     setIsError(error.message);
+//   }
+// };
+// // Note: One Time Data Get
+// useEffect(() => {
+//   getApiData();
+// }, []);
