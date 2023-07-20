@@ -39,7 +39,7 @@ const TabOptions = ({ activeTabs, setActiveTabs }) => {
             key={tab.id}
             onClick={() => setActiveTabs(tab.name)}
             className={`tabOption-item absolute-center cur-po ${
-              activeTabs === tab.name && "active-tab"
+              activeTabs === tab.name && "active-tab bottom-border"
             }`}>
             <div
               className='tabOption-image absolute-center'

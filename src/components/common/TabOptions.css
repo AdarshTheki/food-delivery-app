@@ -3,25 +3,37 @@
   box-shadow: #a7a7a7 0px -0.5px 0px inset;
 }
 
-.tabOption-wrapper{
+.tabOption-wrapper {
   display: flex;
 }
 .tabOption-item {
   margin-right: 24px;
-  padding: 12px 12px 20px ;
+  padding: 12px 12px 20px;
 }
-.tabOption-name{
+.tabOption-name {
   font-size: 20px;
   font-weight: 600;
   margin-left: 10px;
   color: #333;
 }
-.tabOption-image{
-  width: 30px;
-  padding: 15px;
-  border-radius: 50%;
+.tabOption-image {
+  width: 60px;
+  padding: 10px;
+  border-radius: 100vmax;
   background-color: #ffdee6;
 }
-.tabOption-image img{
+.tabOption-image img {
   width: 100%;
+}
+
+/* bottom-border */
+.bottom-border {
+  position: relative;
+}
+.bottom-border::after {
+  position: absolute;
+  top: 90px;
+  content: "";
+  width: 150px;
+  border-bottom: 3px solid red;
 }

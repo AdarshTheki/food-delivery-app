@@ -32,7 +32,7 @@ const DeliveryCollection = () => {
   return (
     <div className='delivery-collection'>
       <div className='max-width'>
-        <h1 className='collection-title'>Inspiration for your first order</h1>
+        <h1 className='title'>Inspiration for your first order</h1>
         <div className='collection-items'>
           {users?.categories?.map((data, index) => {
             // get data into the container
