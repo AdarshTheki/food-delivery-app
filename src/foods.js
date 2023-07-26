@@ -1,3 +1,4 @@
+export const food = 
 [
   {
     "id": "ribs-brisket-and-burnt-ends",
@@ -441,7 +442,7 @@
     "country": "Kansas City, MO"
   },
   {
-    "id": "the-presidential-smoked-meat-sampler",
+    "id": "the-presidential-smoked-meat-sampler1",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/106403/the-presidential-smoked-meat-sampler.9ff90178b5b0f41ce433acb7724220bd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "4505 Burgers & BBQ",
     "dsc": "The Presidential Smoked Meat Sampler",
@@ -873,7 +874,7 @@
     "country": "Milwaukee, WI"
   },
   {
-    "id": "double-chocolate-babka",
+    "id": "double-chocolate-babka1",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134184/double-chocolate-babka.e7bca1ea0d2327e31179841ef74a4611.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Oneg Bakery",
     "dsc": "Double Chocolate Babka",
@@ -900,7 +901,7 @@
     "country": "Lawrence Twp, NJ"
   },
   {
-    "id": "24011-chocolate-and-cinnamon-babka-3-pack",
+    "id": "24011-chocolate-and-cinnamon-babka-3-pack1",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132984/breads-chocolate-and-cinnamon-babka-3-pack.b5c36a0ccbbec8dd7c23771cfa0603fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Breads Bakery",
     "dsc": "Breads Chocolate and Cinnamon Babka - 3 Pack",
@@ -1566,7 +1567,7 @@
     "country": "North Bergen, NJ"
   },
   {
-    "id": "the-presidential-smoked-meat-sampler",
+    "id": "the-presidential-smoked-meat-sampler2",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/106403/the-presidential-smoked-meat-sampler.9ff90178b5b0f41ce433acb7724220bd.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "4505 Burgers & BBQ",
     "dsc": "The Presidential Smoked Meat Sampler",
@@ -1647,7 +1648,7 @@
     "country": "New York, NY"
   },
   {
-    "id": "15259-german-chocolate-killer-brownie-tin-pack",
+    "id": "15259-german-chocolate-killer-brownie-tin-pack2",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132029/german-chocolate-killer-brownie-tin-pack.5ebc34160f28767a9d94c4da2e04c4b9.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Killer Brownie®",
     "dsc": "German Chocolate Killer Brownie®",
@@ -1791,7 +1792,7 @@
     "country": "Philadelphia, PA"
   },
   {
-    "id": "double-chocolate-babka",
+    "id": "double-chocolate-babka2",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134184/double-chocolate-babka.e7bca1ea0d2327e31179841ef74a4611.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Oneg Bakery",
     "dsc": "Double Chocolate Babka",
@@ -2034,7 +2035,7 @@
     "country": "Hoboken, NJ"
   },
   {
-    "id": "24011-chocolate-and-cinnamon-babka-3-pack",
+    "id": "24011-chocolate-and-cinnamon-babka-3-pack2",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132984/breads-chocolate-and-cinnamon-babka-3-pack.b5c36a0ccbbec8dd7c23771cfa0603fb.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Breads Bakery",
     "dsc": "Breads Chocolate and Cinnamon Babka - 3 Pack",
@@ -2124,7 +2125,7 @@
     "country": "Norwalk, CT"
   },
   {
-    "id": "15259-german-chocolate-killer-brownie-tin-pack",
+    "id": "15259-german-chocolate-killer-brownie-tin-pack1",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132029/german-chocolate-killer-brownie-tin-pack.5ebc34160f28767a9d94c4da2e04c4b9.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Killer Brownie®",
     "dsc": "German Chocolate Killer Brownie®",
@@ -2385,7 +2386,7 @@
     "country": "Long Beach, CA"
   },
   {
-    "id": "double-chocolate-babka",
+    "id": "double-chocolate-babka3",
     "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/134184/double-chocolate-babka.e7bca1ea0d2327e31179841ef74a4611.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
     "name": "Oneg Bakery",
     "dsc": "Double Chocolate Babka",
