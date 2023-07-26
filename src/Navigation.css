@@ -1,0 +1,41 @@
+.nav-container {
+  background-color: #111;
+  z-index: 5;
+  position: sticky;
+  top: 0px;
+}
+.Navigation {
+  height: 60px;
+  margin: 0 auto;
+  max-width: calc(50px + 50vw);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+@media (max-width:40em) {
+  .Navigation{
+    gap: 10px;
+  }
+}
+
+.Navigation .nav-links {
+  font-size: calc(10px + 1vw);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 3px 12px;
+  border-radius: 0.5vmax;
+  transition: all 0.3s ease-out !important;
+}
+.Navigation .nav-logo{
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(238, 237, 237);
+  border-radius: 4px;
+}
+
+.Navigation .nav-links:active {
+  color: rgb(176, 110, 243) !important;
+}
