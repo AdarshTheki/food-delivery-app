@@ -1,9 +1,9 @@
-import "./DeliveryCollection.css";
 import { useEffect, useState } from "react";
+import "./NightLife.css";
 
 const URL_LINK = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
-const DeliveryCollection = () => {
+const NightLife = () => {
   const [users, setUsers] = useState([]);
   const fetchData = async () => {
     try {
@@ -60,24 +60,6 @@ const DeliveryCollection = () => {
       </div>
     </div>
   );
-};
+}
 
-export default DeliveryCollection;
-
-// // Note: Get Data with the help of Axios and Error handle
-// const [getData, setData] = useState([]);
-// const [isError, setIsError] = useState("");
-
-// // Note: Using Async Await
-// const getApiData = async () => {
-//   try {
-//     const res = await contextData
-//     setData(res.categories);
-//   } catch (error) {
-//     setIsError(error.message);
-//   }
-// };
-// // Note: One Time Data Get
-// useEffect(() => {
-//   getApiData();
-// }, []);
+export default NightLife

@@ -1,6 +1,6 @@
 // create context (warehouse)  => Provider  => consumer / useContext
 import { createContext } from "react";
-import { data } from "./data";
+import { food } from "./foods";
 
 
 // create context (warehouse)
@@ -9,7 +9,7 @@ const AppContext = createContext();
 // Provider
 const AppProvider = ({ children }) => {
   return (
-    <AppContext.Provider value={data}>
+    <AppContext.Provider value={food}>
       {children}
     </AppContext.Provider>
   );

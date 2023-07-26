@@ -1,5 +1,5 @@
 import "./DiningOut.css";
-import { data } from "../../data";
+import { data } from "../data";
 
 const DiningOut = () => {
   return (
@@ -51,7 +51,7 @@ const DiningOut = () => {
                 <div className='card' key={ele.id}>
                   <div
                     className='card-image'
-                    style={{ backgroundImage: `url(${ele.img})` }}>
+                    style={{ backgroundImage: `url(${ele?.img})` }}>
                     <span className='offers'>
                       50% OFF up to {ele.id.slice(3, 6)}0
                     </span>

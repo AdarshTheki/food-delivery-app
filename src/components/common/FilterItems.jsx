@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./FilterItems.css";
+import Authenticated from "./Authenticated";
 
 const Filters = ["Beef", "Chicken", "Dessert", "Vegan", "Breakfast", "Goat"];
 // const category = ["Filter", "Rating", "Cuisines"];
@@ -21,21 +22,24 @@ const FilterItems = () => {
   return (
     <div className='max-width'>
       <div className='filterItems'>
-        <button className='btn' onClick={filterHandler} ref={btnRef}>
-          Food filter
-        </button>
-        {open && (
-          <div className='menu' ref={menuRef}>
-            <h3>Food filter option</h3>
-            <ul className='menu-list'>
-              {Filters.map((ele) => (
-                <li key={ele} onClick={() => setOpen(false)}>
-                  {ele}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div>
+          <button className='btn' onClick={filterHandler} ref={btnRef}>
+            Food filter
+          </button>
+          {open && (
+            <div className='menu' ref={menuRef}>
+              <h3>Food filter option</h3>
+              <ul className='menu-list'>
+                {Filters.map((ele) => (
+                  <li key={ele} onClick={() => setOpen(false)}>
+                    {ele}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+        <Authenticated />
       </div>
     </div>
   );

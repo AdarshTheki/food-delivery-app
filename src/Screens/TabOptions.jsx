@@ -1,10 +1,13 @@
+import { useState } from "react";
 import "./TabOptions.css";
+import { NavLink } from "react-router-dom";
 
-const TabOptions = ({ activeTabs, setActiveTabs }) => {
+const TabOptions = ({ isActive }) => {
+  const [activeTabs, setActiveTabs] = useState(isActive)
   const tabs = [
     {
       id: 1,
-      name: "Delivery",
+      name: "order",
       active_img:
         "https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png?output-format=webp",
       backdrop: "#fceec0",
@@ -13,7 +16,7 @@ const TabOptions = ({ activeTabs, setActiveTabs }) => {
     },
     {
       id: 2,
-      name: "DiningOut",
+      name: "dining",
       active_img:
         "https://b.zmtcdn.com/data/o2_assets/30fa0a844f3ba82073e5f78c65c18b371616149662.png",
       backdrop: "#fceec0",
@@ -22,7 +25,7 @@ const TabOptions = ({ activeTabs, setActiveTabs }) => {
     },
     {
       id: 3,
-      name: "NightLife",
+      name: "nightlife",
       active_img:
         "https://b.zmtcdn.com/data/o2_assets/855687dc64a5e06d737dae45b7f6a13b1616149818.png",
       backdrop: "#fceec0",
@@ -35,7 +38,9 @@ const TabOptions = ({ activeTabs, setActiveTabs }) => {
     <div className='tabOption'>
       <div className='max-width tabOption-wrapper'>
         {tabs.map((tab) => (
-          <div
+          <NavLink
+            to={`/home/${tab.name}`}
+            replace
             key={tab.id}
             onClick={() => setActiveTabs(tab.name)}
             className={`tabOption-item absolute-center cur-po ${
@@ -54,7 +59,7 @@ const TabOptions = ({ activeTabs, setActiveTabs }) => {
               />
             </div>
             <div className='tabOption-name color'>{tab.name}</div>
-          </div>
+          </NavLink>
         ))}
       </div>
     </div>

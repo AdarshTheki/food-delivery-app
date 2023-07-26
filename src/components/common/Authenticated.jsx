@@ -1,26 +1,12 @@
-import "./Header.css";
+import './Authenticate.css'
 import { useAuth0 } from "@auth0/auth0-react";
-import user_pic from "../../../public/user_pic.png";
-import logo from "../../../public/logo.avif";
-import { FiSearch } from "react-icons/fi";
+import user_pic from "../../assets/user_pic.png";
 
-const Header = () => {
+const Authenticated = () => {
   const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
-
   return (
-    <div className='max-width header'>
-      <div className='header__logo'>
-        <img src={logo} alt='logo' />
-      </div>
-      <div className='search__container'>
-        <div className='search__box'>
-          <input type='text' placeholder='Enter the your Dish...' />
-          <FiSearch className='search-icon' />
-          <button className="btn">Go</button>
-        </div>
-      </div>
-
-      {/* SignIn Details */}
+    <div>
+      {/* Login page and Details */}
       {isAuthenticated ? (
         <div className='signUp-detail' title='User'>
           <span>{user.name.slice(0, 15)}</span>
@@ -42,4 +28,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Authenticated;

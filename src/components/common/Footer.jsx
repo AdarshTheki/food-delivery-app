@@ -10,28 +10,8 @@ const Footer = () => {
             alt='Zomato'
           />
           <div className='footer-location'>
-            <div className='dropdown'>
-              <button className='dropbtn'>⬇ Country</button>
-              <div
-                className='dropdown-content'
-                title='I am working on coming soon...?'>
-                <a href='/'>U.S.A</a>
-                <a href='/'>U.S. Kingdom</a>
-                <a href='/'>india</a>
-                <a href='/'>Pakistan</a>
-              </div>
-            </div>
-            <div className='dropdown'>
-              <button className='dropbtn'>⬇ Language</button>
-              <div
-                className='dropdown-content'
-                title='I am working on coming soon...?'>
-                <a href='/'>English</a>
-                <a href='/'>हिंदी</a>
-                <a href='/'>chīn</a>
-                <a href='/'>渡来人</a>
-              </div>
-            </div>
+              <button>Country</button>
+              <button>Language</button>
           </div>
         </div>
         <div className='footer-main'>
