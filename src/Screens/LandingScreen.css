@@ -53,3 +53,13 @@
   font-weight: 600;
   padding-left: 15px;
 }
+
+@media (max-width:45em) {
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-container .menu {
+    margin-bottom: 10px;
+  }
+}

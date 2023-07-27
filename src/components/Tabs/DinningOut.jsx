@@ -1,5 +1,5 @@
 import "./DiningOut.css";
-import { data } from "../data";
+import { data } from "../../data";
 
 const DiningOut = () => {
   return (
@@ -42,7 +42,7 @@ const DiningOut = () => {
 
       <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
         <div className='DiningOutRestaurant'>
-          <h1 className='title'>Trending dining restaurants in Nagpur foods</h1>
+          <h1 className='title' style={{color:"#fff"}}>Trending dining restaurants in Nagpur foods</h1>
           <div className='card-container'>
             {data
               ?.reverse()

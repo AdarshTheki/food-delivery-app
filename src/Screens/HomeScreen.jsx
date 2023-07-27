@@ -1,8 +1,8 @@
-import Order from "./Order";
-import DinningOut from "./DinningOut";
-import NightLife from "./NightLife.jsx";
 import { useLocation } from "react-router-dom";
-import TabOptions from "./TabOptions";
+import Order from "../components/Tabs/Order";
+import DinningOut from "../components/Tabs/DinningOut";
+import NightLife from "../components/Tabs/NightLife";
+import TabOptions from "../components/Tabs/TabOptions";
 
 const HomeScreen = () => {
   const location = useLocation();

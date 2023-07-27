@@ -2,7 +2,6 @@
 import { createContext } from "react";
 import { food } from "./foods";
 
-
 // create context (warehouse)
 const AppContext = createContext();
 

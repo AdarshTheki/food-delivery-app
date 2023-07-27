@@ -1,11 +1,13 @@
 import { useContext } from "react";
-import { AppContext } from "../context";
+import { AppContext } from "../../context";
 
 const Order = () => {
   const food = useContext(AppContext);
   return (
     <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-      <h1 className='title'>Random Dish to Delivery Search Result</h1>
+      <h1 className='title' style={{ color: "#fff" }}>
+        Random Dish to Delivery Search Result
+      </h1>
       <div className='card-container'>
         {food?.slice(0, 10)?.map((meal, index) => {
           const { name, img, dsc, price, country, rate } = meal;
