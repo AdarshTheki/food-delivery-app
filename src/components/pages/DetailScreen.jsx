@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import sidePic from "../../assets/Illustration.png";
-import "./DetailScreen.css";
 
 const DetailScreen = () => {
   return (

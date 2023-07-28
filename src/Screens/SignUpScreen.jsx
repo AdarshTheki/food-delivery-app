@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./SignUpScreen.css";
 
 // to set the data to localStorage
 const getLocalItems = () => {

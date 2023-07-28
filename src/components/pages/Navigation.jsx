@@ -1,10 +1,6 @@
 import { NavLink } from "react-router-dom";
-import "./Navigation.css";
 
 const Navigation = () => {
-  // const style = ({ isActive }) => ({
-  //   color: isActive ? "red" : "white",
-  // });
   return (
     <div className='nav-container'>
       <nav className='Navigation'>

@@ -1,9 +1,8 @@
-import bgPic from "../../public/Images/landing_bg_img.avif";
-import order_pic from "../../public/Images/order_pic.avif";
-import dinning_pic from "../../public/Images/dinning_pic.avif";
-import nightlife_pic from "../../public/Images/nightlife_pic.avif";
-import "./LandingScreen.css";
 import { NavLink } from "react-router-dom";
+import bgPic from "../assets/landing_bg_img.avif";
+import order_pic from "../assets/order_pic.avif";
+import dinning_pic from "../assets/dinning_pic.avif";
+import nightlife_pic from "../assets/nightlife_pic.avif";
 
 const MenuData = [
   {

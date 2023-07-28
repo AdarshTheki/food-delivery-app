@@ -5,7 +5,7 @@ const Order = () => {
   const food = useContext(AppContext);
   return (
     <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
-      <h1 className='title' style={{ color: "#fff" }}>
+      <h1 className='title'>
         Random Dish to Delivery Search Result
       </h1>
       <div className='card-container'>

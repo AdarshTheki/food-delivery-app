@@ -1,6 +1,15 @@
 /* font: Nunito - weight -> 300;400;500;600;700;800;900 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
 
+@import './components/styles/DetailScreen.css';
+@import './components/styles/Footer.css';
+@import './components/styles/Navigation.css';
+@import './components/styles/DiningOut.css';
+@import './components/styles/NightLife.css';
+@import './components/styles/TabOptions.css';
+@import './components/styles/LandingScreen.css';
+@import './components/styles/SignUpScreen.css';
+
 /* Global CSS  */
 @import "./components/styles/global.css";
 

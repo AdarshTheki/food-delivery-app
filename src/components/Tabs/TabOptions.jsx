@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./TabOptions.css";
 import { NavLink } from "react-router-dom";
 
 const TabOptions = ({ isActive }) => {
