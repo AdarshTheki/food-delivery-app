@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-// to set the data to localStorage
+// To get the data to localStorage
 const getLocalItems = () => {
   let lists = localStorage.getItem("lists");
   if (lists) {
@@ -10,18 +10,27 @@ const getLocalItems = () => {
   }
 };
 
-const SignUpScreen = () => {
-  const [inputData, setInputData] = useState("");
+const UserProfile = ({user}) => {
+  console.log(user)
+  const [inputData, setInputData] = useState({
+    email: "",
+    password: "",
+  });
   const [items, setItems] = useState(getLocalItems());
+
+  const onChangeHandler = (e) => {
+    e.preventDefault();
+    setInputData({ ...inputData, [e.target.name]: e.target.value });
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
     // Add Items
-    if (!inputData) {
+    if (!inputData.email) {
       return;
     } else {
-      setItems([...items, inputData]);
-      setInputData("");
+      setItems([...items, JSON.stringify(inputData)]);
+      setInputData({ email: "", password: "" });
     }
   };
 
@@ -35,7 +44,7 @@ const SignUpScreen = () => {
   // remove all items
   const removeAllItems = () => setItems([]);
 
-  // Add and remove to local Storage
+  // To setItem Add and remove to local Storage
   useEffect(() => {
     localStorage.setItem("lists", JSON.stringify(items));
   }, [items]);
@@ -52,28 +61,43 @@ const SignUpScreen = () => {
           <label htmlFor='email'>
             Email:{" "}
             <input
-              type='email'
-              value={inputData}
-              onChange={(e) => setInputData(e.target.value)}
+              type='text'
+              name='email'
+              value={inputData.email}
+              onChange={onChangeHandler}
               placeholder='email is here'
             />
           </label>
+          <br />
+          <label htmlFor='password'>
+            password:{" "}
+            <input
+              type='text'
+              name='password'
+              value={inputData.password}
+              onChange={onChangeHandler}
+              placeholder='password is here'
+            />
+          </label>
+          <br />
           <button type='submit' className='btn'>
             Add Email
           </button>
         </form>
         <div className='result'>
-          {items.map((e, index) => (
-            <p key={index}>
-              <span>
-                <strong>{index + 1}: </strong>
-                {e}
-              </span>{" "}
-              <button className='btn red' onClick={() => deleteItem(index)}>
-                delete
-              </button>
-            </p>
-          ))}
+          {items.map((e, index) => {
+            return (
+              <p key={index}>
+                <span>
+                  <strong>{index + 1}: </strong>
+                  {e}
+                </span>{" "}
+                <button className='btn red' onClick={() => deleteItem(index)}>
+                  delete
+                </button>
+              </p>
+            );
+          })}
           <button className='btn darkred' onClick={removeAllItems}>
             remove All
           </button>
@@ -82,5 +106,4 @@ const SignUpScreen = () => {
     </div>
   );
 };
-
-export default SignUpScreen;
+export default UserProfile;

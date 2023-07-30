@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import sidePic from "../../assets/Illustration.png";
 
-const DetailScreen = () => {
+const AboutScreen = () => {
   return (
     <div className='max-width'>
       <div className='container'>
@@ -25,4 +25,4 @@ const DetailScreen = () => {
   );
 }
 
-export default DetailScreen
+export default AboutScreen

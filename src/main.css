@@ -1,14 +1,14 @@
 /* font: Nunito - weight -> 300;400;500;600;700;800;900 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
 
-@import './components/styles/DetailScreen.css';
-@import './components/styles/Footer.css';
-@import './components/styles/Navigation.css';
-@import './components/styles/DiningOut.css';
-@import './components/styles/NightLife.css';
-@import './components/styles/TabOptions.css';
-@import './components/styles/LandingScreen.css';
-@import './components/styles/SignUpScreen.css';
+@import "./components/styles/DetailScreen.css";
+@import "./components/styles/Footer.css";
+@import "./components/styles/Navigation.css";
+@import "./components/styles/DiningOut.css";
+@import "./components/styles/NightLife.css";
+@import "./components/styles/TabOptions.css";
+@import "./components/styles/LandingScreen.css";
+@import "./components/styles/SignUpScreen.css";
 
 /* Global CSS  */
 @import "./components/styles/global.css";
@@ -21,4 +21,35 @@
 body {
   min-height: 100vh;
   font-family: "Nunito", sans-serif;
+}
+
+.signOut-btn,
+.signIn-btn {
+  z-index: 6;
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  top: 14px;
+  left: 10%;
+  border: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 1vmax;
+  color: #fff;
+  transition: all 0.3s ease-out;
+}
+.signOut-btn {
+  background-color: rgb(233, 61, 61);
+}
+.signIn-btn {
+  background-color: rgb(11, 151, 11);
+}
+.signOut-btn:hover,
+.signIn-btn:hover {
+  opacity: 0.8;
+}
+.signOut-btn:active,
+.signIn-btn:active {
+  opacity: 1;
 }

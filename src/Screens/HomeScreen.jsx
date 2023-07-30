@@ -6,10 +6,10 @@ import TabOptions from "../components/Tabs/TabOptions";
 
 const HomeScreen = () => {
   const location = useLocation();
-  console.log("HomeScreen:", location);
+  // console.log("HomeScreen:", location);
 
   const current = location.pathname.replace("/home/", "");
-  console.log(current);
+  // console.log(current);
 
   if (current === "order") {
     return (
@@ -31,16 +31,23 @@ const HomeScreen = () => {
     return (
       <>
         <TabOptions isActive={current} />
-        <NightLife/>
+        <NightLife />
       </>
     );
   }
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "50vh",
+        flexDirection:"column"
+      }}>
       <TabOptions isActive={current} />
-      <h1>Hello of word 404!</h1>
-    </>
+      <h1>There is no Route for this "{current}" 404 error!</h1>
+    </div>
   );
 };
 export default HomeScreen;
