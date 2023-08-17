@@ -34,7 +34,7 @@ const LandingScreen = () => {
       <h1>Discover the best food & drinks in Nagpur</h1>
       <div className='menu-container'>
         {MenuData?.map((menu) => (
-          <NavLink key={menu.id} className='menu' to={`home/${menu.link}`}>
+          <NavLink key={menu.id} className='menu' to={`${menu.link}`}>
             <img src={menu.img} alt={menu.name} />
             <h2>{menu.name}</h2>
             <p>{menu.description}</p>
