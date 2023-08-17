@@ -3,39 +3,37 @@
   z-index: 5;
   position: sticky;
   top: 0px;
-}
-.Navigation {
-  height: 60px;
-  margin-right: 50px;
   display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: end;
+  justify-content: space-between;
+  padding: 10px 50px;
 }
-@media (max-width:40em) {
-  .Navigation{
-    gap: 10px;
-  }
-}
-
-.Navigation .nav-links {
-  font-size: calc(10px + 1vw);
-  font-weight: 700;
+.nav-container .links {
+  font-weight: 800;
+  font-size: 20px;
+  color: rgb(189, 189, 4);
   text-decoration: none;
-  text-transform: capitalize;
+}
+.nav-form input {
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+}
+.nav-form button:hover {
+  opacity: 0.8;
+}
+.nav-form button {
+  background-color: rgb(5, 167, 5);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.user-icon {
+  cursor: pointer;
+  text-decoration: none;
   color: #fff;
-  padding: 3px 12px;
-  border-radius: 0.5vmax;
-  transition: all 0.3s ease-out !important;
 }
-.Navigation .nav-logo{
-  display: block;
-  width: 80px;
-  padding: 4px;
-  background-color: rgb(238, 237, 237);
-  border-radius: 4px;
-}
-
-.Navigation .nav-links:active {
-  color: rgb(176, 110, 243) !important;
+.user-icon:hover {
+  color: rgb(236, 214, 16);
 }

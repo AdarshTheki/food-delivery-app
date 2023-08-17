@@ -6,10 +6,7 @@ import TabOptions from "../components/Tabs/TabOptions";
 
 const HomeScreen = () => {
   const location = useLocation();
-  // console.log("HomeScreen:", location);
-
   const current = location.pathname.replace("/home/", "");
-  // console.log(current);
 
   if (current === "order") {
     return (
@@ -46,7 +43,7 @@ const HomeScreen = () => {
         flexDirection:"column"
       }}>
       <TabOptions isActive={current} />
-      <h1>There is no Route for this "{current}" 404 error!</h1>
+      <h1>There is no Route for this {current} 404 error!</h1>
     </div>
   );
 };

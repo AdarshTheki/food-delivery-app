@@ -1,0 +1,52 @@
+.user {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+.user h2 {
+  padding-top: 50px;
+  font-size: calc(30px + 1vw);
+}
+.user h3 {
+  font-size: calc(40px + 1vw);
+  line-height: 1;
+  color: #ebcd26;
+}
+.user p {
+  font-size: 20px;
+}
+.user input {
+  padding: 10px 30px;
+  border-radius: 2vmax;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+.user input:focus-visible {
+  outline: 4px solid #dfc42e;
+  border: none;
+}
+.user button {
+  padding: 15px 40px;
+  border-radius: 1vmax;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  background-color: #ebcd26;
+  text-transform: uppercase;
+  transition: all .4s ease-out;
+}
+.user button:hover {
+  background-color: #af991e;
+  transform: scale(0.9);
+}
