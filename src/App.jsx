@@ -13,15 +13,15 @@ import GoToBtn from "./Components/GoToBtn";
 const App = () => {
   const theme = {
     colors: {
-      heading: "rgb(24 24 29)",
-      text: "rgb(24 24 29)",
+      heading: "#18181d",
+      text: "#18181d",
       white: "#fff",
-      black: " #212529",
+      black: "#212529",
       helper: "#8490ff",
-      bg: "rgb(239 239 255)",
+      bg: "#efefff",
       footer_bg: "#0a1435",
-      btn: "rgb(98 84 243)",
-      border: "rgba(98, 84, 243, 0.5)",
+      btn: "#594aff",
+      border: "#6254f380",
       hr: "#ffffff",
       gradient:
         "linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%)",

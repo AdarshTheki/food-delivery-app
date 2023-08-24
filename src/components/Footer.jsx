@@ -16,9 +16,9 @@ const Footer = () => {
           </div>
 
           <div className='contact-short-btn'>
-            <NavLink to='/contact'>
-              <Button>Get Started</Button>
-            </NavLink>
+            <Button>
+              <NavLink to='/contact'>Get Started</NavLink>
+            </Button>
           </div>
         </div>
       </section>
@@ -37,12 +37,10 @@ const Footer = () => {
             {isAuthenticated ? (
               <>
                 <h3>
-                  Hey, {user?.given_name || user?.name} Your login is
-                  successfully. Your last update is {user?.updated_at}.
+                  Hey, {user?.nickname || user?.name} Your login is
+                  successfully. Your last update time is {user?.updated_at}.
                 </h3>
-                <form onSubmit={() => logout()} className='form-input'>
-                  <input type='submit' value='logOut' />
-                </form>
+                <Button className="btn" onClick={() => logout()}>Logout</Button>
               </>
             ) : (
               <>
@@ -56,7 +54,10 @@ const Footer = () => {
                     autoComplete='off'
                     placeholder='Email'
                   />
-                  <input type='submit' value='Subscribe' />
+                  <br />
+                  <div>
+                    <Button className="btn">Login</Button>
+                  </div>
                 </form>
               </>
             )}
@@ -116,10 +117,6 @@ const Wrapper = styled.section`
   .contact-short-btn {
     justify-self: end;
     align-self: center;
-
-    button {
-      font-size: 1.5rem;
-    }
   }
 
   footer {

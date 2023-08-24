@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CgMenu, CgCloseR } from "react-icons/cg";
+import { FaUser } from "react-icons/fa";
 import { Nav } from "../styles/Nav";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -9,8 +10,32 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const User = () => {
-    const { user } = useAuth0();
-    return <h3>Hello User</h3>
+    const { user, isAuthenticated, loginWithRedirect, logout, isLoading } =
+      useAuth0();
+    if (isLoading) {
+      return <h3>User loading....</h3>;
+    }
+    return (
+      <>
+        {isAuthenticated ? (
+          <div className='user-img'>
+            <img src={user?.picture} alt='img' width={30} />
+            <span className='name'>{user?.nickname || user?.name}</span>
+            <h3 className='log' onClick={() => logout()}>
+              logOut
+            </h3>
+          </div>
+        ) : (
+          <div className='user-img'>
+            <FaUser className='name' />
+            <span className='name'>Owner</span>
+            <h3 className='log' onClick={() => loginWithRedirect()}>
+              Login
+            </h3>
+          </div>
+        )}
+      </>
+    );
   };
   return (
     <>
@@ -42,7 +67,9 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <User />
+              <span className='navbar-link'>
+                <User />
+              </span>
             </li>
           </ul>
           {/* logo icon */}

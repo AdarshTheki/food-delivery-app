@@ -1,6 +1,32 @@
 import { styled } from "styled-components";
 
 export const Nav = styled.nav`
+  .user-img {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img {
+      display: block;
+      width: 30px;
+      border-radius: 50%;
+    }
+    .name {
+      font-size: 1.5rem;
+    }
+    .log {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: red;
+      font-weight:500;
+      cursor:pointer;
+      margin: 0 5px;
+
+      &:hover{
+        color:#333;
+      }
+    }
+  }
+
   .navbar-list {
     display: flex;
     gap: 4.8rem;

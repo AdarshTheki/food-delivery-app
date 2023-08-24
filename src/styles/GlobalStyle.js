@@ -110,7 +110,7 @@ input, textarea {
   box-shadow: ${({ theme }) => theme.colors.shadowSupport};
 }
 
-input[type="submit"] {
+input[type="submit"], .btn {
   max-width: 16rem;
   margin-top: 2rem;
   background-color: ${({ theme }) => theme.colors.btn};
@@ -121,6 +121,11 @@ input[type="submit"] {
   text-transform: uppercase;
   font-size: 1.8rem;
   cursor: pointer;
+
+}
+.btn:hover{
+  transform:scaleY(0.9);
+  opacity:0.8;
 }
 
 
