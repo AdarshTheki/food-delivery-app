@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { NavLink } from "react-router-dom";
-import './cate.css'
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -57,99 +56,104 @@ const Categories = () => {
 
     const SingleProduct = ({ idMeal, strMeal, strMealThumb }) => {
       return (
-        <div
-          className='single-product'
+        <NavLink
+          to={`/product/${idMeal}`}
+          className='single-product-img'
           style={{
             backgroundImage: `url(${strMealThumb})`,
-            width: 200,
-            height: 200,
           }}>
           <div className='detail'>
-            <h3>{strMeal?.slice(0, 20)}</h3>
+            <h3>{strMeal?.slice(0, 30)}</h3>
             <p>Price: ${idMeal?.slice(3, 6) * 10}</p>
           </div>
-        </div>
+        </NavLink>
       );
     };
 
     return (
       <>
         {isLoading ? (
-          <h2>Loading is here...</h2>
+          <WrapperLoading>Product Loading...</WrapperLoading>
         ) : (
-          <div className="center-product">
+          <div className='center-product'>
             <h2>{strCategory}</h2>
-            <div className="product-container">
-              {products?.slice(0,5).map((product) => (
+            <div className='product-container'>
+              {products?.slice(0, 5).map((product) => (
                 <SingleProduct key={product?.idMeal} {...product} />
               ))}
             </div>
           </div>
         )}
       </>
-      // <Wrapper>
-      //   <div className='img'>
-      //     <img src={strCategoryThumb} alt='img' width='100%' />
-      //   </div>
-      //   <div>
-      //     <h3>{strCategory}</h3>
-      //     <p>{strCategoryDescription?.substring(0, 40)} ...</p>
-      //     <br />
-      //     <NavLink className='link' to={strCategory}>
-      //       Get Products
-      //     </NavLink>
-      //   </div>
-      // </Wrapper>
     );
   };
 
   return (
     <>
       {loading ? (
-        <h1>loading...</h1>
+        <WrapperLoading>Categories Loading...</WrapperLoading>
       ) : (
-        <div>
+        <Wrapper>
           {categories?.map((item) => {
             return <ShowProducts key={item?.idCategory} {...item} />;
           })}
-        </div>
+        </Wrapper>
       )}
     </>
   );
 };
 
+const WrapperLoading = styled.div`
+  margin-top: 10%;
+  font-size: 3rem;
+  text-align: center;
+`;
+
 const Wrapper = styled.div`
-  border-radius: 1vmax;
-  border: 1px solid lightgray;
-  padding: 10px 5px;
-  display: flex;
-  flex-wrap:wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  transition: all 0.3s ease-out;
-  &:hover {
-    box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.2);
-  }
-
-  .img {
+  .single-product-img {
     width: 200px;
-    img {
-      border-radius: 30%;
-    }
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    border-radius: 1vmax;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+  }
+  .single-product-img:hover {
+    transform: scale(0.95);
+  }
+  .single-product-img .detail {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+  }
+  .detail h3 {
+    color: white;
+    font-weight: 600;
+  }
+  .detail p {
+    margin: 0;
+    font-weight: 500;
+    color: rgb(5, 236, 5);
   }
 
-  .link {
-    font-size: 1.5rem;
-    color: white;
-    background: green;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 1vmax;
-
-    &:hover {
-      opacity: 0.8;
-    }
+  .center-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
   }
 `;
 
