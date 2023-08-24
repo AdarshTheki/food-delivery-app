@@ -19,6 +19,9 @@ const Header = () => {
 export default Header;
 
 const MainHeader = styled.header`
+  // position:fixed;
+  // z-index:10;
+  // width:100%;
   padding: 0 4.8rem;
   height: 7rem;
   background-color: ${({ theme }) => theme.colors.bg};

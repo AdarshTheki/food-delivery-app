@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
-import Categories from "./Pages/Categories";
+import ProductDetail from "./Pages/ProductDetail";
+import Products from "./Pages/Products";
 import Error from "./Pages/Error";
 import Header from "./Components/Header.jsx";
 import Footer from "./Components/Footer";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import GoToBtn from "./Components/GoToBtn";
-import Products from "./Pages/Products";
 
 const App = () => {
   const theme = {
@@ -18,7 +18,7 @@ const App = () => {
       white: "#fff",
       black: " #212529",
       helper: "#8490ff",
-      bg: "rgb(249 249 255)",
+      bg: "rgb(239 239 255)",
       footer_bg: "#0a1435",
       btn: "rgb(98 84 243)",
       border: "rgba(98, 84, 243, 0.5)",
@@ -39,9 +39,9 @@ const App = () => {
           <Header />
           <Routes>
             <Route exact path='/' element={<Home />} />
-            <Route path='/categories' element={<Categories />} />
-            <Route path='/categories/:id' element={<Products />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path='products' element={<Products />} />
+            <Route path='product/:id' element={<ProductDetail />} />
+            <Route path='contact' element={<Contact />} />
             <Route path='/*' element={<Error />} />
           </Routes>
           <Footer />
