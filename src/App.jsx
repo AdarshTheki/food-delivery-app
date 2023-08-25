@@ -4,7 +4,7 @@ import Contact from "./Pages/Contact";
 import ProductDetail from "./Pages/ProductDetail";
 import Products from "./Pages/Products";
 import Error from "./Pages/Error";
-import Header from "./Components/Header.jsx";
+import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/GlobalStyle";
