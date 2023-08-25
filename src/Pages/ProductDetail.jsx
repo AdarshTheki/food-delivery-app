@@ -3,7 +3,6 @@ import { NavLink, useLocation } from "react-router-dom";
 import { styled } from "styled-components";
 import { FaYoutube, FaSourcetree } from "react-icons/fa";
 import { Button } from "../styles/Button";
-import "./style.css";
 
 const ProductDetail = () => {
   const location = useLocation();
