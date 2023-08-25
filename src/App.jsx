@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Contact from "./Pages/Contact";
 import ProductDetail from "./Pages/ProductDetail";
@@ -35,18 +35,16 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='products' element={<Products />} />
-            <Route path='product/:id' element={<ProductDetail />} />
-            <Route path='contact' element={<Contact />} />
-            <Route path='/*' element={<Error />} />
-          </Routes>
-          <Footer />
-          <GoToBtn />
-        </BrowserRouter>
+        <Header />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='products' element={<Products />} />
+          <Route path='product/:id' element={<ProductDetail />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='/*' element={<Error />} />
+        </Routes>
+        <Footer />
+        <GoToBtn />
       </ThemeProvider>
     </>
   );
